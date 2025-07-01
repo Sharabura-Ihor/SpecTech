@@ -28,7 +28,7 @@ body {
             rgba(233, 169, 9, 0.5) 0%,
             rgba(233, 169, 9, 0) 100%
         ),
-        url("bg.png") repeat-y left top,
+        url("./images/bg.png") repeat-y left top,
         #fff;
     background-repeat: no-repeat, no-repeat, repeat-y;
     background-size: 100% 50vh, 100% 30vh, 100% auto;
