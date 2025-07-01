@@ -1,0 +1,183 @@
+.table-container {
+    width: 970px;
+    margin: 0 auto;
+    overflow-y: auto;
+    border-radius:5px;
+
+}
+
+.declarations-table {
+    width: 100%;
+    max-width: 970px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-collapse: separate;
+    border-spacing: 0;
+
+}
+
+.tbody-gap-row td {
+    height: 20px;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+.declarations-table tbody {
+    border-radius: 5px;
+}
+
+
+.declarations-table th, .declarations-table td {
+    padding: 10px 10px;
+    background: #fff;
+    text-align: center;
+    box-shadow:
+        inset 0 -0.5px rgba(0, 0, 0, 0.1),   /* нижня межа */
+        inset -0.5px 0 rgba(0, 0, 0, 0.1),   /* ліва межа */
+        inset 0 0.5px rgba(0, 0, 0, 0.1),    /* верхня межа */
+        inset 0.5px 0 rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+
+}
+
+
+.declarations-table th:nth-child(1),
+.declarations-table td:nth-child(1) { width: 6%;  }
+
+.declarations-table th:nth-child(2),
+.declarations-table td:nth-child(2) { width: 28%; }
+
+.declarations-table th:nth-child(3),
+.declarations-table td:nth-child(3) { width: 18%; }
+
+.declarations-table th:nth-child(4),
+.declarations-table td:nth-child(4) { width: 27%; }
+
+.declarations-table th:nth-child(5),
+.declarations-table td:nth-child(5) { width: 20%; }
+
+/* Лівий верхній кут — перша комірка шапки */
+.declarations-table th:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/* Правий верхній кут — остання комірка шапки */
+.declarations-table th:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Лівий нижній кут — перша комірка останнього рядка */
+.declarations-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 5px;
+}
+
+/* Правий нижній кут — остання комірка останнього рядка */
+.declarations-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 5px;
+}
+
+/* Лівий нижній кут — перша клітинка другого рядка */
+.declarations-table tbody tr:first-child td:first-child {
+    border-top-left-radius: 5px;
+}
+
+/* Правий нижній кут — остання клітинка другого рядка */
+.declarations-table tbody tr:first-child td:last-child {
+    border-top-right-radius: 5px;
+}
+
+
+.declarations-table th {
+    font-weight: 600;
+    position: sticky;  /* Див. нижче для sticky */
+    top: 0;
+    z-index: 2;
+}
+
+.declarations-table td {
+    text-align: center;
+    vertical-align: top;
+
+}
+
+.declarations-table td:nth-child(1) {
+    text-align: center;
+    vertical-align: middle;
+}
+.pagination {
+    display: inline-block;
+    align-items: center;
+    background: #fff;
+    border-radius: 50px;
+    padding: 5px 5px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #65882d;
+    color: black;
+
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+.pagination a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #005500;
+    font-weight: bold;
+    color: #454343;
+}
+.pagination span {
+    margin: 0 10px;
+    color: #454343;
+}
+.pagination-wrapper {
+    text-align: center;  /* 👈 центрована обгортка */
+}
+
+.pagination-top {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: right;  /* 👈 вирівнювання праворуч */
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+.pagination-top a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.pagination-top span {
+    margin: 0 10px;
+    color: white;
+}
+
+@media (max-width: 1000px) {
+    .table-container { margin-left: 5px; margin-right: 5px; width: calc(100vw - 10px);}
+}
+/* Мобільна адаптація */
+@media (max-width: 800px) {
+    .declarations-table th,
+    .declarations-table td { padding: 5px 5px; font-size: 0.75em;}
+    .pagination-top {margin-top: 0px;}
+}
+
+@media (max-width: 500px) {
+    .declarations-table th { font-size: 0.5em;}
+    .declarations-table td { padding: 5px 5px; font-size: 0.65em;}
+    .pagination {font-size: 12px;}
+    .pagination-top {font-size: 12px;}
+}
+@media (max-width: 400px) {
+    .declarations-table th,
+    .declarations-table td { padding: 5px 5px; font-size: 0.5em;}
+    .pagination {font-size: 10px;}
+    .pagination-top {font-size: 10px;}
+}

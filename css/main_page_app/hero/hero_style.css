@@ -1,0 +1,125 @@
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.logo-and-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.hero-logo {
+    width: 300px;
+    height: 300px;
+    margin: 15px;
+
+    transition: width 0.35s, height 0.35s;
+}
+.hero-title-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 2.19em;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 12px;
+    margin-top: 0;
+    text-shadow: 1px 1px 3px #000000b0;
+
+    transition: font-size 0.35s;
+}
+.hero-subtitle {
+    font-size: 1.7em;
+    font-weight: 600;
+    color: #fff;         /* трохи прозорий білий */
+    text-align: center;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px #000000b0;
+}
+
+.hero-company {
+    font-size: 1.7em;
+    color: #fff;
+    margin: 0 0 0 0;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 1px 1px 2px #00000080;
+    transition: font-size 0.35s;
+}
+
+.hero-code {
+    font-size: 1.6em;
+    color: #fff;
+    font-weight: 700;
+    margin: 5px;
+    text-align: center;
+    text-shadow: 1px 1px 1.5px #00000080;
+    transition: font-size 0.35s;
+}
+
+
+.hero-gallery {
+    display: flex;
+    gap: 3px;
+    width: calc(100vw - 10px);
+    justify-content: center;
+    flex-wrap: nowrap;          /* Головне! Завжди в один рядок */
+
+}
+.hero-gallery img {
+    max-width: 320px;
+    aspect-ratio: 16/10;
+    height: auto;
+    border-radius: 5px;
+    border: 3px solid #fff;  /* Біла рамка */
+    box-sizing: border-box;
+    flex: 1 1 0;
+    object-fit: cover;
+    min-width: 120px;           /* щоб на дуже вузьких екранах не стали занадто малі */
+    transition: width 0.2s;
+
+}
+
+@media (max-width: 800px) {
+    .hero-gallery {width: calc(100vw - 10px);}
+    .hero-gallery img {width: 100%;}
+    h1 { font-size: 1.25em; }
+    .hero-title {font-size: 1.6em; margin-bottom: 10px;}
+    .hero-subtitle {font-size: 1.4em; font-weight: 500;}
+    .hero-company {font-size: 1.5em; font-weight: 500;}
+    .hero-code {font-size: 1.35em; font-weight: 500;}
+}
+
+@media (max-width: 600px) {
+    .hero-logo { width: 100px;height: 100px;}
+    .hero-title {font-size: 1.3em;margin-bottom: 8px;}
+    .hero-subtitle {font-size: 1.15em;}
+    .hero-company {font-size: 1.1em;}
+    .hero-code {font-size: 0.97em;}
+
+}
+@media (max-width: 500px) {
+    .hero-logo { width: 75px;height: 75px;margin: 10px;}
+    .hero-title {font-size: 1.05em;margin-bottom: 6px;}
+    .hero-subtitle {font-size: 0.9em;}
+    .hero-company {font-size: 0.92em; font-weight: 500;}
+    .hero-code {font-size: 0.83em; font-weight: 500;}
+
+}
+@media (max-width: 400px) {
+    .hero-logo { width: 50px;height: 50px; margin: 5px;}
+    .hero-gallery img {min-width: 10px}
+    h1 { font-size: 1.25em; }
+    .hero-title {font-size: 0.8em;}
+    .hero-subtitle {font-size: 0.7em;}
+    .hero-company {font-size: 0.72em; font-weight: 500;}
+    .hero-code {font-size: 0.64em; font-weight: 500;}
+}
