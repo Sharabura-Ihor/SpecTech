@@ -38,7 +38,7 @@
 .hero-subtitle {
     font-size: 1.7em;
     font-weight: 600;
-    color: #fff;         /* трохи прозорий білий */
+    color: #fff;
     text-align: center;
     margin-top: -5px;
     margin-bottom: 10px;
@@ -71,7 +71,7 @@
     gap: 3px;
     width: calc(100vw - 10px);
     justify-content: center;
-    flex-wrap: nowrap;          /* Головне! Завжди в один рядок */
+    flex-wrap: nowrap;
 
 }
 .hero-gallery img {
@@ -79,11 +79,11 @@
     aspect-ratio: 16/10;
     height: auto;
     border-radius: 5px;
-    border: 3px solid #fff;  /* Біла рамка */
+    border: 5px solid #ffdd00;
     box-sizing: border-box;
     flex: 1 1 0;
     object-fit: cover;
-    min-width: 120px;           /* щоб на дуже вузьких екранах не стали занадто малі */
+    min-width: 120px;           
     transition: width 0.2s;
 
 }
